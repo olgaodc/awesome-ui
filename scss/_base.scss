@@ -1,0 +1,40 @@
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.content-wrapper {
+    font-family: 'Work Sans', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgb(242,231,224);
+    background: radial-gradient(circle, rgba(242,231,224,1) 62%, rgba(254,251,247,1) 100%);
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+    
+} 
+
+.container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.logo-wrapper {
+    color: #647B64;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+
+}

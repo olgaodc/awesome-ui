@@ -1,0 +1,35 @@
+
+
+.hero-box-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 141px;
+
+    .hero-box {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .hero-box-info {
+
+            .hero-box-title {
+                max-width: 507px;
+                color: #333333;
+                font-weight: 500;
+                font-size: 48px;
+                margin: 0 0 24px;
+                line-height: 116%;
+            }
+
+            .hero-box-description {
+                max-width: 479px;
+                color: #4F4F4F;
+                font-weight: 400;
+                font-size: 20px;
+                margin: 0 0 32px;
+                line-height: 132%;
+            }
+        }
+    }
+}
