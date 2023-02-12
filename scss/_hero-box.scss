@@ -4,12 +4,22 @@
     display: flex;
     justify-content: center;
     margin-bottom: 141px;
+    position: relative;
+
+        &::before {
+            content: url('img/light-grey-ellipse.png');
+            display: inline-block;
+            position: absolute;
+            bottom: 17px;
+            left: -143px;
+        }
 
     .hero-box {
-        width: 95%;
+        width: 90%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
 
         .hero-box-info {
 
@@ -20,6 +30,16 @@
                 font-size: 48px;
                 margin: 0 0 24px;
                 line-height: 116%;
+                max-width: 507px;
+                position: relative;
+
+                &::after {
+                    content: url('img/pink-ellipse.png');
+                    display: inline-block;
+                    position: absolute;
+                    top: -20px;
+                    left: 162px;
+                }
             }
 
             .hero-box-description {
