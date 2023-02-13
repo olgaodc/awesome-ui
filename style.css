@@ -10,6 +10,11 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+.bg-pink-grey {
+  background: rgb(242, 231, 224);
+  background: linear-gradient(180deg, rgb(242, 231, 224) 25%, rgb(234, 234, 230) 70%, rgb(251, 248, 245) 92%, rgb(255, 255, 255) 100%);
+}
+
 .wrap {
   overflow: hidden;
 }

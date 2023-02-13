@@ -11,13 +11,12 @@ body {
 
 .content-wrapper {
     font-family: 'Work Sans', sans-serif;
-    // background: rgb(242,231,224);
-    // background: radial-gradient(circle, rgba(242,231,224,1) 62%, rgba(254,251,247,1) 100%);
-    // position: relative;
-    // z-index: -2;
-    // overflow: hidden;
-    
 } 
+
+.bg-pink-grey {
+    background: rgb(242,231,224);
+    background: linear-gradient(180deg, rgba(242,231,224,1) 25%, rgba(234,234,230,1) 70%, rgba(251,248,245,1) 92%, rgba(255,255,255,1) 100%);
+}
 
 .wrap {
     overflow: hidden;
