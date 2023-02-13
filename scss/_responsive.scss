@@ -1,0 +1,39 @@
+@use 'variables/screen';
+
+@mixin xl {
+    @media screen and (max-width: screen.$xl) {
+      @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: screen.$lg) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: screen.$md) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width: screen.$sm) {
+        @content;
+    }
+}
+
+// Different container sizes
+
+@mixin dif-xl {
+    @media screen and (max-width: screen.$different-container-xl) {
+        @content;
+    }
+}
+
+@mixin dif-lg {
+    @media screen and (max-width: screen.$different-container-lg) {
+        @content;
+    }
+}

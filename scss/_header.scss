@@ -1,6 +1,12 @@
+@use 'variables/colors';
+@use 'responsive';
 
 .header-wrapper {
     padding-top: 50px;
+
+    @include responsive.lg {
+        padding-top: 40px;
+    }
 }
 .header {
     display: flex;
@@ -9,17 +15,24 @@
     column-gap: 40px;
     margin-bottom: 56px;
 
+    @include responsive.sm {
+        margin-bottom: 24px;
+    }
+
     .navigation {
         display: flex;
         align-items: center;
         column-gap: 24px;
+
+        @include responsive.md {
+            display: none;
+        }
 
         .navigation-list {
             display: flex;
             flex-wrap: wrap;
             row-gap: 10px;
             justify-content: flex-end;
-            // column-gap: 48px;
             margin: 0;
             padding-left: 0;
 
@@ -30,14 +43,22 @@
 
                 .navigation-link {
                     text-decoration: none;
-                    color: #333333;
-                    padding: 0 24px;
+                    color: colors.$gray1;
+                    padding: 12px 24px;
 
                     &:hover {
-                        color: #647B64;
+                        color: colors.$green;
                     }
                 }
             }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        @include responsive.md {
+            display: block;
         }
     }
 }

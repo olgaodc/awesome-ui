@@ -1,4 +1,5 @@
-
+@use 'variables/colors';
+@use 'responsive';
 
 .hero-box-wrapper {
     display: flex;
@@ -6,32 +7,61 @@
     margin-bottom: 141px;
     position: relative;
 
+    @include responsive.sm {
+        margin-bottom: 72px;
+    }
+
         &::before {
-            content: url('img/light-grey-ellipse.png');
+            content: url('img/light-grey-ellipse.svg');
             display: inline-block;
             position: absolute;
             bottom: 17px;
-            left: -143px;
-        }
+            left: -211px;
+
+            @include responsive.xl {
+                left: -143px; 
+            }
+
+            @include responsive.lg {
+                left: -183px; 
+            }
+        }       
 
     .hero-box {
         width: 90%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        column-gap: 50px;
+
+        @include responsive.lg {
+            width: 100%;
+        }
         
 
         .hero-box-info {
+            width: 60%;
+
+            @include responsive.md {
+                width: 80%;
+            }
+
+            @include responsive.sm {
+                width: 90%;
+            }
 
             .hero-box-title {
                 max-width: 507px;
-                color: #333333;
+                color: colors.$gray1;
                 font-weight: 500;
                 font-size: 48px;
-                margin: 0 0 24px;
+                margin: 0;
                 line-height: 116%;
-                max-width: 507px;
                 position: relative;
+
+                @include responsive.sm {
+                    font-size: 24px;
+                }
 
                 &::after {
                     content: url('img/pink-ellipse.png');
@@ -39,16 +69,37 @@
                     position: absolute;
                     top: -20px;
                     left: 162px;
+
+                    @include responsive.sm {
+                        transform: scale(0.6);
+                        top: -37px;
+                        left: 64px;                        
+                    }
                 }
             }
 
             .hero-box-description {
                 max-width: 479px;
-                color: #4F4F4F;
+                color: colors.$gray2;
                 font-weight: 400;
                 font-size: 20px;
-                margin: 0 0 32px;
+                margin: 24px 0 32px;
                 line-height: 132%;
+
+                @include responsive.sm {
+                    font-size: 10px;
+                    margin: 12px 0 16px;
+                }
+            }
+        }
+
+        .hero-box-image-wrapper {
+            width: 37%;
+
+            .hero-box-image {
+                @include responsive.sm {
+                    width: 178px;
+                }
             }
         }
     }

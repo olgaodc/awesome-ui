@@ -1,0 +1,84 @@
+@use 'variables/colors';
+@use 'responsive';
+
+.hero-box-wrapper .hero-box.button,
+.section.button,
+.form.button {
+    width: 350px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 27px 22px 26px 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive.sm {
+        width: 195px;
+        padding: 15px 12px 14px 16px;
+    }
+
+    &:hover {
+        background: linear-gradient(102.3deg, #778977 -4.62%, #7fb27f 178.22%), linear-gradient(102.3deg, #209ac0 -4.62%, #17295d 178.22%), #3b93ca;
+    }
+
+    .button-image {
+        @include responsive.sm {
+            width: 12px;
+            height: 8px;
+        }
+    }
+}
+
+.container .hero-box-wrapper .hero-box.button {
+    @include responsive.sm {
+        width: 175px;
+        padding: 13px 11px 14px 15px;
+    }
+
+    .button-image {
+        @include responsive.sm {
+            width: 11px;
+            height: 8px;
+        }
+    }
+}
+
+.button {
+    text-decoration: none;
+    color: colors.$button-text-color;
+    font-size: 16px;
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%), linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%), #0E70AF;
+    border-radius: 3px;
+
+
+    @include responsive.sm {
+        font-size: 10px;
+    }
+
+
+    &.navigation-link {
+        text-align: center;
+        font-weight: 500;
+        padding: 10px 15px;
+        width: 93px;
+    
+        &:hover {
+            background: linear-gradient(102.3deg, #778977 -4.62%, #7fb27f 178.22%), linear-gradient(102.3deg, #209ac0 -4.62%, #17295d 178.22%), #3b93ca;
+        }
+    }
+
+    &.form {
+        width: 283px;
+        font-size: 12px;
+        padding: 21px 23px 21px 22px;
+
+        .button-image {
+            width: 17px;
+            height: 12px;
+        }
+    }
+
+}
+
+
+

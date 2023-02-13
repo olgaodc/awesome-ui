@@ -1,0 +1,176 @@
+@use 'variables/colors';
+@use 'responsive';
+
+.footer-wrapper {
+    background-color: colors.$footer-color;
+    padding: 100px 0 102px;
+    
+    @include responsive.lg {
+        padding: 40px 0 40px;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px 20px;
+
+        .footer-info {
+            font-size: 14px;
+            font-weight: 400;
+
+            .info-list{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 16px;
+    
+                .info-description {
+                    color: colors.$gray2;
+                    margin: 17px 0 0;
+                    line-height: 132%;
+                    max-width: 253px;
+                }
+
+                .rights-info {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 8px;
+                    color: colors.$gray2;
+                }
+
+                .social-media-list {
+                    padding-left: 0;
+                    margin: 2px 0 0;
+                    display: grid;
+                    grid-template-columns: repeat(4, 32px);
+                    gap: 16px;
+
+                    .social-media-item {
+                        list-style-type: none;
+
+                        &:first-of-type {
+                            .social-media-link {
+                                position: relative;
+                            
+                                &::after {
+                                content: url('img/instagram-icon.svg');
+                                position: absolute;
+                                display: inline-block;
+                                left: 7px;
+                                bottom: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-company {
+
+            .company-title {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                color: colors.$green;
+                margin: 0 0 24px;
+            }
+
+            .company-list {
+                padding-left: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 12px;
+                
+                .company-item {
+                    list-style-type: none;
+
+                    .company-link {                        
+                        text-decoration: none;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: colors.$gray1;
+
+                        &:hover {
+                            color: colors.$green;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .footer-support {
+
+            .support-title {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                color: colors.$green;
+                margin: 0 0 24px;
+            }
+
+            .support-list {
+                padding-left: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 12px;
+                
+                .support-item {
+                    list-style-type: none;
+
+                    .support-link {                        
+                        text-decoration: none;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: colors.$gray1;
+
+                        &:hover {
+                            color: colors.$green;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .footer-form-wrapper {
+            .footer-form {
+                display: flex;
+                flex-direction: column;
+
+                .form-title {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: colors.$green;
+                    margin-bottom: 13px;
+                }
+
+                textarea {
+                    width: 283px;
+                    height: 113px;
+                    resize: none;
+                    
+                    border: none;
+                    border-radius: 2px; 
+
+                    font-family: 'Work Sans', sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: colors.$gray2;
+
+                    padding-left: 24px;
+                    padding-top: 12px;                    
+                    margin-bottom: 28px;                   
+                }
+            }
+        }
+    }
+}
